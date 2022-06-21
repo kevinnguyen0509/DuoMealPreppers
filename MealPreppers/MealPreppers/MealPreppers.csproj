@@ -164,6 +164,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Index\Middle\_GridView.cshtml" />
     <Content Include="Views\Home\Index\Left\_leftTopPanel.cshtml" />
+    <Content Include="Views\Home\Index\Right\_RightDetailsPanel.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -171,7 +172,6 @@
     <Folder Include="Models\" />
     <Folder Include="Scripts\Index\Model\" />
     <Folder Include="Scripts\Index\Views\" />
-    <Folder Include="Views\Home\Index\Right\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
