@@ -162,6 +162,7 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Index\Middle\_GridView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -170,7 +171,6 @@
     <Folder Include="Scripts\Index\Model\" />
     <Folder Include="Scripts\Index\Views\" />
     <Folder Include="Views\Home\Index\Left\" />
-    <Folder Include="Views\Home\Index\Middle\" />
     <Folder Include="Views\Home\Index\Right\" />
   </ItemGroup>
   <ItemGroup>
