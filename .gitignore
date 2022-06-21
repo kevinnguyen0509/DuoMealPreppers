@@ -8,3 +8,12 @@ MealPreppers/.vs/MealPreppers/config/applicationhost.config
 MealPreppers/.vs/MealPreppers/v16/.suo
 MealPreppers/.vs/MealPreppers/config/applicationhost.config
 *.config
+*.config
+*.config
+*.pdb
+*.dll
+*.cache
+*.pdb
+*.dll
+MealPreppers/.vs/MealPreppers/v16/.suo
+*.config
