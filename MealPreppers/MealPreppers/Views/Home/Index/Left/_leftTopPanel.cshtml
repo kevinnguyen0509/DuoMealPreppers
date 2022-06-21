@@ -1,4 +1,21 @@
-﻿<p>Hello</p>
-<h1>Tomatoes</h1>
-<h2>Potatoes</h2>
-<h3>Chicken</h3>
+﻿@Styles.Render(("~/Content/CustomCss/Index/leftPartialViews/leftTopPanel.css"))
+<div id="leftTopPanel">
+    <h2>Left Side</h2>
+    <div id="userImg">
+        <img src="https://pbs.twimg.com/profile_images/949787136030539782/LnRrYf6e_400x400.jpg" class="userImg" />
+    </div>
+    <a href="~/Views/Home/Contact.cshtml">Friends</a>
+    <div id="searchBar">
+        <input type="text" placeholder="Search Bar" />
+    </div>
+    <div id="filterForUnwantedFood">
+        <button class="btn active" onclick="filterSelection('all')">Show All Food</button>
+        <button class="btn" onclick="filterSelection('No Peanuts')">No Peanuts</button>
+        <button class="btn" onclick="filterSelection('No Dairy')">No Dairy</button>
+        <button class="btn" onclick="filterSelection('No Meat')">No Meat</button>
+        <button class="btn" onclick="filterSelection('No Gluton')">No Gluton</button>
+        <button class="btn" onclick="filterSelection('No Fruits')">No Fruits</button>
+    </div>
+</div>
+
+

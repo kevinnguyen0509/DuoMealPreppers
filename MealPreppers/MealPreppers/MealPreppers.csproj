@@ -131,6 +131,8 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\CustomCss\Index\leftPartialViews\BottomLeftPanel.css" />
+    <Content Include="Content\CustomCss\Index\leftPartialViews\leftTopPanel.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -165,6 +167,7 @@
     <Content Include="Views\Home\Index\Middle\_GridView.cshtml" />
     <Content Include="Views\Home\Index\Left\_leftTopPanel.cshtml" />
     <Content Include="Views\Home\Index\Right\_RightDetailsPanel.cshtml" />
+    <Content Include="Views\Home\Index\Left\_leftBottomPanel.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

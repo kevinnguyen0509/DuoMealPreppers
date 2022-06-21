@@ -1,12 +1,18 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+@Styles.Render(("~/Content/CustomCss/Index/leftPartialViews/BottomLeftPanel.css"))
+@Styles.Render(("~/Content/CustomCss/Index/leftPartialViews/leftTopPanel.css"))
 
 <div class="row">
     <div class="col-md-2" id="IndexLeftSide">
-        <h2>Left Side</h2>
         @Html.Partial("~/Views/Home/Index/Left/_leftTopPanel.cshtml")
+        <div class="row">
+            <div class="col-md-2">
+                @Html.Partial("~/Views/Home/Index/Left/_leftBottomPanel.cshtml")
+            </div>
 
+        </div>
     </div>
     <div class="col-md-8">
         <h2>Middle Side</h2>
