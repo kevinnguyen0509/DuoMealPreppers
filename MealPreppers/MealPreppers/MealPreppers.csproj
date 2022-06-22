@@ -133,6 +133,9 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\CustomCss\Index\leftPartialViews\BottomLeftPanel.css" />
     <Content Include="Content\CustomCss\Index\leftPartialViews\leftTopPanel.css" />
+    <Content Include="Content\CustomCss\Index\RightDetailsView\RightDetailsSection.css" />
+    <Content Include="Content\CustomCss\Shared\SharedClasses.css" />
+    <Content Include="Content\Images\ricebowl.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

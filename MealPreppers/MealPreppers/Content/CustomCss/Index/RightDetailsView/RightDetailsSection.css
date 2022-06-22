@@ -1,0 +1,55 @@
+﻿/*
+    #F7F8FA - Section background color
+    #0F0F2C - Header background Color
+    #27A761 - Header font color
+    #e67e22 - orange
+
+*/
+
+#RightSection{
+    height: 700px;
+    overflow-y: auto;
+
+}
+#DetailsContentContainer {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#IndexRightSide {
+    padding: 0px;
+    padding-right: 15px;
+}
+#RightSideHeaderContainer {
+    display: flex;
+    align-items: center;
+    background: #0F0F2C;
+}
+#RightHeaderDetailFontOne{
+    font-style: italic;
+    margin-right: 5px;
+}
+
+#HeaderImageContainer {
+    width: 50px;
+    height: 70px;
+}
+
+#DetailsImageContainer {
+    width: 100%;
+    height: 230px;
+    background: #F7F8FA;
+    margin-bottom: 50px;
+}
+
+#DetailsImageContainer::after{
+
+    display: block;
+    height: 5px;
+    background-color: #27A761;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+
+}

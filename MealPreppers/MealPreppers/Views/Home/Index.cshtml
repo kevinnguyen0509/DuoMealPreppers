@@ -19,7 +19,14 @@
         @Html.Partial("~/Views/Home/Index/Middle/_GridView.cshtml")
     </div>
     <div class="col-md-2" id="IndexRightSide">
-        <h2>Right Side</h2>
+        <div id="RightSideHeaderContainer">
+            <div id="HeaderImageContainer">
+                <img src="~/Content/Images/ricebowl.png" class="image" />
+            </div>
+            <h3 id="RightHeaderDetailFontOne" class="HeaderSecondaryFontColor">Yummy</h3>
+            <h3 class="HeaderFontColor">Details</h3>
+
+        </div>
         @Html.Partial("~/Views/Home/Index/Right/_RightDetailsPanel.cshtml")
     </div>
 </div>
