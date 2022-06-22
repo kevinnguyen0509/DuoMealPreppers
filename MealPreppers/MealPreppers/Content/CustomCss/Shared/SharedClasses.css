@@ -41,3 +41,7 @@ p {
     width: 100%;
     height: 100%;
 }
+
+#HowToContentContainer{
+    padding-right: 15px;
+}
