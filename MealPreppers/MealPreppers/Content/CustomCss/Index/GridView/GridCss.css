@@ -3,11 +3,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     width: 100%;
-    height: 100%;
+    height: 850px;
     padding-top: 10px;
     padding-bottom: 10px;
     border: 5px solid black;
-    
+    overflow-y: auto;
 }
 
 .grid-item {
@@ -16,9 +16,10 @@
     width: 90%;
     margin: auto;
     margin-bottom: 5px;
-   // background-color: aliceblue;
+    // background-color: aliceblue;
     text-align: center;
     padding: 0px;
+    overflow-y: auto;
 }
 
 .item-picture {
