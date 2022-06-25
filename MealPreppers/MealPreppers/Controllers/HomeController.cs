@@ -9,6 +9,7 @@ namespace MealPreppers.Controllers
     public class HomeController : Controller
     {
         public string MyProfilePath = "~/Views/Home/MyProfile/Myprofile.cshtml";
+        public string LoginPath = "~/Views/Home/Login/Login.cshtml";
         public ActionResult Index()
         {
             return View();
@@ -26,6 +27,11 @@ namespace MealPreppers.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+
+        public ActionResult Login()
+        {
+            return View(LoginPath);
         }
     }
 }

@@ -135,6 +135,7 @@
     <Content Include="Content\CustomCss\Index\leftPartialViews\BottomLeftPanel.css" />
     <Content Include="Content\CustomCss\Index\leftPartialViews\leftTopPanel.css" />
     <Content Include="Content\CustomCss\Index\RightDetailsView\RightDetailsSection.css" />
+    <Content Include="Content\CustomCss\Login\Login.css" />
     <Content Include="Content\CustomCss\MyProfile\MiddleView\MyProfileMiddleCSS.css" />
     <Content Include="Content\CustomCss\Shared\SharedClasses.css" />
     <Content Include="Content\Images\ricebowl.png" />
@@ -174,6 +175,7 @@
     <Content Include="Views\Home\Index\Right\_RightDetailsPanel.cshtml" />
     <Content Include="Views\Home\Index\Left\_leftBottomPanel.cshtml" />
     <Content Include="Views\Home\MyProfile\Middle\_MyProfileGrid.cshtml" />
+    <Content Include="Views\Home\Login\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
