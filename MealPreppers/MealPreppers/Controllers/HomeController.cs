@@ -8,16 +8,17 @@ namespace MealPreppers.Controllers
 {
     public class HomeController : Controller
     {
+        public string MyProfilePath = "~/Views/Home/MyProfile/Myprofile.cshtml";
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult MyProfile()
         {
             ViewBag.Message = "Your application description page.";
 
-            return View();
+            return View(MyProfilePath);
         }
 
         public ActionResult Contact()
