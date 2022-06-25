@@ -10,9 +10,11 @@ namespace MealPreppers.Controllers
     {
         public string MyProfilePath = "~/Views/Home/MyProfile/Myprofile.cshtml";
         public string LoginPath = "~/Views/Home/Login/Login.cshtml";
+        public string IndexPath = "~/Views/Home/Index/Index.cshtml";
+        public string DiscoverPath = "~/Views/Home/Discover/Discover.cshtml";
         public ActionResult Index()
         {
-            return View();
+            return View(IndexPath);
         }
 
         public ActionResult MyProfile()
@@ -22,11 +24,11 @@ namespace MealPreppers.Controllers
             return View(MyProfilePath);
         }
 
-        public ActionResult Contact()
+        public ActionResult Discover()
         {
             ViewBag.Message = "Your contact page.";
 
-            return View();
+            return View(DiscoverPath);
         }
 
         public ActionResult Login()

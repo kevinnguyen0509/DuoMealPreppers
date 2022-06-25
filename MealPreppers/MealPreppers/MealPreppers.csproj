@@ -176,8 +176,8 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\MyProfile\MyProfile.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Discover\Discover.cshtml" />
+    <Content Include="Views\Home\Index\Index.cshtml" />
     <Content Include="Views\Home\Index\Middle\_GridView.cshtml" />
     <Content Include="Views\Home\Index\Left\_leftTopPanel.cshtml" />
     <Content Include="Views\Home\Index\Right\_RightDetailsPanel.cshtml" />
