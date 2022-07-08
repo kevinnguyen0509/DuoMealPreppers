@@ -1,9 +1,4 @@
-﻿@{
-    ViewBag.Title = "Home Page";
-}
-@Styles.Render(("~/Content/CustomCss/Index/leftPartialViews/BottomLeftPanel.css"))
-@Styles.Render(("~/Content/CustomCss/Index/leftPartialViews/leftTopPanel.css"))
-
+﻿
 <div class="row">
     <div class="col-md-2" id="IndexLeftSide">
         @Html.Partial("~/Views/Home/Index/Left/_leftTopPanel.cshtml")
@@ -15,8 +10,8 @@
         </div>
     </div>
     <div class="col-md-8">
+        @Html.Partial("~/Views/Home/Feed/_FeedPartial.cshtml")
 
-        @Html.Partial("~/Views/Home/Index/Middle/_GridView.cshtml")
     </div>
     <div class="col-md-2" id="IndexRightSide">
         <div id="RightSideHeaderContainer">
@@ -30,4 +25,3 @@
         @Html.Partial("~/Views/Home/Index/Right/_RightDetailsPanel.cshtml")
     </div>
 </div>
-

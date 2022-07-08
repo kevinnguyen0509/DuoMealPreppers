@@ -12,6 +12,7 @@ namespace MealPreppers.Controllers
         public string LoginPath = "~/Views/Home/Login/Login.cshtml";
         public string IndexPath = "~/Views/Home/Index/Index.cshtml";
         public string DiscoverPath = "~/Views/Home/Discover/Discover.cshtml";
+        public string FeedPath = "~/Views/Home/Feed/Feed.cshtml";
         public ActionResult Index()
         {
             return View(IndexPath);
@@ -22,6 +23,12 @@ namespace MealPreppers.Controllers
             ViewBag.Message = "Your application description page.";
 
             return View(MyProfilePath);
+        }
+        public ActionResult Feed()
+        {
+            ViewBag.Message = "Your application description page.";
+
+            return View(FeedPath);
         }
 
         public ActionResult Discover()

@@ -127,6 +127,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\CustomCss\FriendFeed\Middle\FriendFeedCSS.css" />
     <Content Include="Content\Vendor\bootstrap-theme.css" />
     <Content Include="Content\Vendor\bootstrap-theme.min.css" />
     <Content Include="Content\Vendor\bootstrap.css" />
@@ -146,6 +147,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Scripts\FriendFeed\FriendFeedHorizontalScroll.js" />
     <Content Include="Scripts\Vendor\bootstrap.js" />
     <Content Include="Scripts\Vendor\bootstrap.min.js" />
     <Content Include="fonts\FontAwesome.otf" />
@@ -184,6 +186,8 @@
     <Content Include="Views\Home\Index\Left\_leftBottomPanel.cshtml" />
     <Content Include="Views\Home\MyProfile\Middle\_MyProfileGrid.cshtml" />
     <Content Include="Views\Home\Login\Login.cshtml" />
+    <Content Include="Views\Home\Feed\Feed.cshtml" />
+    <Content Include="Views\Home\Feed\_FeedPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

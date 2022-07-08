@@ -1,0 +1,36 @@
+﻿
+#feed{
+    
+    text-align: center;
+    text-decoration: underline ;
+    margin-bottom: 100px;
+}
+
+#grid-layout {
+    display: grid;
+    grid-gap: 16px;
+    padding: 16px;
+    grid-template-columns: repeat(auto-fill,minmax(300px,300px));
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(300px,300px);
+    overflow-x: scroll;
+    height: 300px;
+    overflow-y: hidden;
+    cursor: pointer;
+    
+   
+}
+
+
+
+#grid-item {
+    width: 500px;
+    grid-row: 1;
+    grid-column: auto;
+}
+
+#grid-layout::-webkit-scrollbar{
+    
+    height: 10px;
+}
+
