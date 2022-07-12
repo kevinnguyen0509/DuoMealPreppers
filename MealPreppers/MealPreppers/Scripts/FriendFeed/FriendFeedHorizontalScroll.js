@@ -9,6 +9,7 @@ for (let i = 0; i < slider.length; i++) {
     let isDown = false;
     let startX;
     let scrollLeft;
+
     console.log("Pog"); // Look at me fuckn debug like a champ EZ
 
     slider[i].addEventListener('mousedown', (e) => {
