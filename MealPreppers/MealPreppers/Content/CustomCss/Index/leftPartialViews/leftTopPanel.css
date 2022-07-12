@@ -1,10 +1,25 @@
-﻿@import url('../RightDetailsView/RightDetailsSection.css');
+﻿
+/*
+    #F7F8FA - Section background color
+    #0F0F2C - Header background Color
+    #27A761 - Header font color
+    #e67e22 - orange
+
+*/
+
 #leftTopPanel{
     border:solid;
     border-color:black;
     border-width:5px;
     height:500px;
     overflow-y: auto;
+    
+}
+#_leftTopHeader {
+    display: flex;
+    padding-bottom: 10px;
+    background: #0F0F2C;
+    color: #27A761;
 }
 
 
@@ -17,3 +32,19 @@
     background-position:center center;
     background-size:cover;
 }
+#searchbar{
+    display:flex;
+    padding-bottom:20px;
+}
+#filterForUnwantedFood{
+    padding-top:20px;
+}
+.btn {
+    background: coral;
+    color:white;
+}
+.friendsLink{
+    font-size:30px;
+    padding-bottom:10px;
+}
+
