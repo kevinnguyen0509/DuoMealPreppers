@@ -188,6 +188,7 @@
     <Content Include="Views\Home\Login\Login.cshtml" />
     <Content Include="Views\Home\Feed\Feed.cshtml" />
     <Content Include="Views\Home\Feed\_FeedPartial.cshtml" />
+    <Content Include="Views\Home\Index\Left\_addRecipePartialModal.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

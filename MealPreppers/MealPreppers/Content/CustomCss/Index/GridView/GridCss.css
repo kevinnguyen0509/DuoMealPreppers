@@ -1,5 +1,6 @@
 ﻿
 #grid-layout {
+    background-color: lightcyan;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     width: 100%;
@@ -13,6 +14,7 @@
 }
 
 .grid-item {
+    background-color: white;
     border: 5px solid black;
     height: 250px;
     width: 90%;

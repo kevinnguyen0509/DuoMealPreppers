@@ -15,7 +15,17 @@
         <button class="btn" onclick="filterSelection('No Meat')">No Meat</button>
         <button class="btn" onclick="filterSelection('No Gluton')">No Gluton</button>
         <button class="btn" onclick="filterSelection('No Fruits')">No Fruits</button>
+
     </div>
+
+    <div id="addRecipeButton">
+        <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#exampleModal">
+            Add Recipe
+        </button>
+    </div>
+
+    @Html.Partial("~/Views/Home/Index/Left/_addRecipePartialModal.cshtml")
+    
 </div>
 
 

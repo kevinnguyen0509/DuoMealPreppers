@@ -1,0 +1,60 @@
+﻿<link rel="stylesheet" type="text/css" href="~/Content/CustomCss/Index/leftPartialViews/leftTopPanel.css" />
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add a Recipe:</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="col-md-12 col-xs-12">
+                        <Label id="recipeLabel" class="form-control">Recipe Title</Label>
+                        <input id="modal-input" type="text" name="RecipeTitle" class="form-control" placeholder="..." />
+                    </div>
+
+                    <div class="col-md-4 col-xs-12">
+                        <Label id="recipeLabel" class="form-control">Prep Time</Label>
+                        <input id="modal-input" type="text" name="PrepTime" class="form-control" placeholder="..." />
+
+                    </div>
+
+                    <div class="col-md-4 col-xs-12">
+                        <Label id="recipeLabel" class="form-control">Servings</Label>
+
+                        <input id="modal-input" type="text" name="RecipeTitle" class="form-control" placeholder="..." />
+                    </div>
+
+                    <div class="col-md-4 col-xs-12">
+                        <Label id="recipeLabel" class="form-control">Calories</Label>
+
+                        <input id="modal-input" type="text" name="RecipeTitle" class="form-control" placeholder="..." />
+                    </div>
+
+                    <div class="col-md-12 col-xs-12">
+                        <Label id="recipeLabel" class="form-control">Ingredients</Label>
+
+                        <textarea rows="5" class="form-control" name="ingredients" placeholder="..."></textarea>
+                    </div>
+
+                    <div class="col-md-12 col-xs-12">
+                        <Label id="recipeLabel" class="form-control">Instructions</Label>
+
+                        <textarea rows="5" class="form-control" name="instructions" placeholder="..."></textarea>
+                    </div>
+
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+

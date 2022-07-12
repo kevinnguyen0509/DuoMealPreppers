@@ -1,5 +1,8 @@
 ﻿@import url('../RightDetailsView/RightDetailsSection.css');
+
+
 #leftTopPanel{
+    position: relative;
     border:solid;
     border-color:black;
     border-width:5px;
@@ -17,3 +20,69 @@
     background-position:center center;
     background-size:cover;
 }
+
+#addRecipeButton{
+   
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    
+    
+    
+}
+
+
+
+
+/*Modal PartialView CSS*/
+.close{
+    color: blue;
+}
+
+.cookTimeContainer {
+    display: flex;
+}
+
+.cookTime{
+    margin-left: 10px;
+}
+
+#modal-input {
+    margin-right: 0px;
+    
+    
+    border-radius: 0px 0px 5px 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: none;
+}
+
+form{
+   align-items: center;
+   width: 500px;
+}
+
+.modal-body{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+textarea {
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#recipeLabel {
+    background-color: coral;
+    margin-bottom: 0;
+    color: white;
+    border-radius: 5px 5px 0px 0px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: none;
+    margin-top: 10px;
+}
+
