@@ -36,11 +36,11 @@
     display:flex;
     padding-bottom:20px;
 }
-#filterForUnwantedFood{
-    padding-top:20px;
+#filterForUnwantedFood {
+    padding-top: 20px;
     
 }
-.noFood {
+#noFood {
     background: coral;
     color: white;
     margin-bottom: 5px;
