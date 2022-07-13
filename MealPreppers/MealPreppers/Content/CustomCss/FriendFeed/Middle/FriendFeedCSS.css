@@ -8,13 +8,13 @@
 
 #grid-layout {
     display: grid;
-    grid-gap: 16px;
+    grid-gap: 10px;
     padding: 16px;
     grid-template-columns: repeat(auto-fill,minmax(300px,300px));
     grid-auto-flow: column;
     grid-auto-columns: minmax(300px,300px);
     overflow-x: scroll;
-    height: 300px;
+    height: 350px;
     overflow-y: hidden;
     cursor: pointer;
     justify-content:initial;
