@@ -5,7 +5,7 @@
 @Styles.Render(("~/Content/CustomCss/Index/leftPartialViews/leftTopPanel.css"))
 
 <div class="row">
-    <div class="col-md-2" id="IndexLeftSide">
+    <div class="col-md-2 col-xs-12" id="IndexLeftSide">
         @Html.Partial("~/Views/Home/Index/Left/_leftTopPanel.cshtml")
         <div class="row">
             <div class="col-md-2">
@@ -14,11 +14,11 @@
 
         </div>
     </div>
-    <div class="col-md-8">
+    <div class="col-md-8 col-xs-12" >
 
         @Html.Partial("~/Views/Home/Index/Middle/_GridView.cshtml")
     </div>
-    <div class="col-md-2" id="IndexRightSide">
+    <div class="col-md-2 col-xs-12" id="IndexRightSide">
         <div id="RightSideHeaderContainer">
             <div id="HeaderImageContainer">
                 <img src="~/Content/Images/ricebowl.png" class="image" />

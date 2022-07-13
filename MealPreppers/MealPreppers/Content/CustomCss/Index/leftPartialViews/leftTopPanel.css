@@ -82,6 +82,10 @@
     border: none;
 }
 
+.modal-dialog{
+    width: 800px;
+}
+
 form {
     align-items: center;
     width: 500px;
@@ -91,6 +95,7 @@ form {
     display: flex;
     justify-content: center;
     width: 100%;
+    padding-left: 0px;
 }
 
 textarea {
@@ -108,3 +113,16 @@ textarea {
     margin-top: 10px;
 }
 
+/*Modal Preview Container*/
+
+.modal-preview-container{
+    display: flex;
+}
+
+.modal-preview{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 200px;
+    
+}

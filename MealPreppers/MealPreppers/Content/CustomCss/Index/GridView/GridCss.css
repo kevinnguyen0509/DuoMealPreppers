@@ -60,6 +60,7 @@
 .card-title {
     margin-left: 5px;
     margin-right: 5px;
+    font-weight: bold;
 }
 
 .recipeDescContainer {
@@ -85,7 +86,7 @@
     padding-top: 10px;
     
 }
-}
+
 
 .grid-card-title{
     
