@@ -17,6 +17,7 @@
     height: 300px;
     overflow-y: hidden;
     cursor: pointer;
+    justify-content:initial;
     
    
 }
