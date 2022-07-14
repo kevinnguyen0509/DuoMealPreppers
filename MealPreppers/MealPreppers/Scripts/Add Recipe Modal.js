@@ -4,7 +4,6 @@ let previewDescription = document.getElementById('previewDescription');
 let previewImage = document.getElementById('previewImage');
 
 
-
 modalSubmitButton.addEventListener('click', function() {
     
 
@@ -34,3 +33,23 @@ newImage.addEventListener('keyup', function () {
     previewImage.src = newImage.value;
 
 });
+
+
+//$("#add-recipe-modal-form").submit(function (e) {
+//        e.preventDefault(); // Prevents the form from submitting
+//        console.log("pog");
+//        var recipeForm = $(this);
+
+
+
+//})
+
+$(document).ready(function (e) {
+    $('add-recipe-modal-form').
+
+
+    
+});
+
+const formData = new FormData();
+

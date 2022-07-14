@@ -42,5 +42,11 @@ namespace MealPreppers.Controllers
         {
             return View(LoginPath);
         }
+
+        public ActionResult AddRecipe()
+        {
+            return View(IndexPath);
+        }
+
     }
 }
