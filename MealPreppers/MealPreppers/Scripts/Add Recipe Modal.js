@@ -44,12 +44,12 @@ newImage.addEventListener('keyup', function () {
 
 //})
 
-$(document).ready(function (e) {
-    $('add-recipe-modal-form').
+//$(document).ready(function (e) {
+//    $('add-recipe-modal-form').
 
 
     
-});
+//});
 
-const formData = new FormData();
+//const formData = new FormData();
 
