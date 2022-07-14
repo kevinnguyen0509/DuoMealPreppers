@@ -1,13 +1,21 @@
-﻿
+﻿@Styles.Render(("~/Content/CustomCss/Index/leftPArtialViews/BottomLeftPanel.css"))
+
 <div id="ownedIngredients">
-    <h2>Owned Ingredients</h2>
-    <input type="search" placeholder="Salt" id="haveIngredientsSearch" />
-    <button class="btn active" onclick="filterSelection('all')">Show All Ingredients</button>
-    <button class="btn" onclick="filterSelection('Ground Beef')">Ground Beef</button>
-    <button class="btn" onclick="filterSelection('Taco Seasoning')">Taco Seasoning</button>
-    <button class="btn" onclick="filterSelection('Hot Sauce')">Hot Sauce</button>
-    <button class="btn" onclick="filterSelection('Soy Sauce')">Soy Sauce</button>
-    <button class="btn" onclick="filterSelection('Shrimp')">Shrimp</button>
-    <button class="btn" onclick="filterSelection('Lettuce')">Lettuce</button>
+    <div id="bottomHeader">
+        <h2>Owned Ingredients</h2>
+    </div>
+    <div id="haveIngredientsSearch">
+        <input type="search" placeholder="Salt" id="haveIngredientsSearchInput" />
+        <button type="submit" name="search">Search</button>
+    </div>
+    <div id="filterhaveIngredients">
+        <button id ="haveFood" class="btn active" onclick="filterSelection('all')">Show All Ingredients</button>
+        <button id ="haveFood" class="btn" onclick="filterSelection('Ground Beef')">Ground Beef</button>
+        <button id ="haveFood" class="btn" onclick="filterSelection('Taco Seasoning')">Taco Seasoning</button>
+        <button id ="haveFood" class="btn" onclick="filterSelection('Hot Sauce')">Hot Sauce</button>
+        <button id ="haveFood" class="btn" onclick="filterSelection('Soy Sauce')">Soy Sauce</button>
+        <button id ="haveFood" class="btn" onclick="filterSelection('Shrimp')">Shrimp</button>
+        <button id ="haveFood" class="btn" onclick="filterSelection('Lettuce')">Lettuce</button>
+    </div>
 </div>
 
