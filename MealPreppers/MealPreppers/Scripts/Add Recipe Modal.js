@@ -3,22 +3,42 @@ let previewTitle = document.getElementById('card-title-preview');
 let previewDescription = document.getElementById('previewDescription');
 let previewImage = document.getElementById('previewImage');
 
-
-modalSubmitButton.addEventListener('click', function() {
-    
+const modalForm = document.getElementById('add-recipe-modal-form');
 
 
-});
 
-let newTitle = document.getElementById('modal-input-title');
+
+modalForm.addEventListener('submit', callBack);
+
+function callBack(event) {
+    console.log("hi");
+    event.preventDefault();
+    const myFormData = new FormData(event.target);
+
+    const formDataObj = {};
+    myFormData.forEach((value, key) => (formDataObj[key] = value));
+    console.log(formDataObj); 
+
+}
+
+
+
+
+
+
+
+// -------------------------------- Modal Previews Below -------------------------------- //
+
+let newTitle = document.getElementById('modal-input-title'); // Preview Title
 
 newTitle.addEventListener('keyup', function () {
-    console.log(newTitle.value);
+    //console.log(newTitle.value);
     previewTitle.innerHTML = newTitle.value;
+           
 
 });
 
-let newDescription = document.getElementById('modal-description-preview');
+let newDescription = document.getElementById('modal-description-preview'); // Preview Desc
 
 newDescription.addEventListener('keyup', function () {
     console.log(newDescription.value);
@@ -26,7 +46,7 @@ newDescription.addEventListener('keyup', function () {
 
 });
 
-let newImage = document.getElementById('modal-preview-image');
+let newImage = document.getElementById('modal-preview-image'); // Preview Image
 
 newImage.addEventListener('keyup', function () {
     console.log(newImage.value);
@@ -35,21 +55,19 @@ newImage.addEventListener('keyup', function () {
 });
 
 
-//$("#add-recipe-modal-form").submit(function (e) {
-//        e.preventDefault(); // Prevents the form from submitting
-//        console.log("pog");
-//        var recipeForm = $(this);
-
-
+//$("form").submit(function (e) {
+//     e.preventDefault(); // Prevents the form from submitting
+        
+//    formData.append("recipeTitle", previewTitle.innerHTML);
+//    console.log(formData.get("recipeTitle"))
 
 //})
 
-//$(document).ready(function (e) {
-//    $('add-recipe-modal-form').
 
 
-    
-//});
 
-//const formData = new FormData();
+
+
+
+
 

@@ -47,12 +47,12 @@
                             <form id="add-recipe-modal-form" action="/Home/" type="post">
                                 <div class="col-md-12 col-xs-12">
                                     <Label id="recipeLabel" class="form-control">Recipe Title</Label>
-                                    <input value="" maxlength="40" id="modal-input-title" type="text" name="RecipeTitle" class="form-control" placeholder="..."/>
+                                    <input value="" maxlength="40" id="modal-input-title" type="text" name="recipeTitle" class="form-control" placeholder="..." />
                                 </div>
 
                                 <div class="col-md-12 col-xs-12">
                                     <Label id="recipeLabel" class="form-control">Recipe Description</Label>
-                                    <input id="modal-description-preview" type="text" name="RecipeTitle" class="form-control" placeholder="..." />
+                                    <input id="modal-description-preview" type="text" name="recipeDesc" class="form-control" placeholder="..." />
                                 </div>
 
 
@@ -71,34 +71,35 @@
 
                                 <div class="col-md-4 col-xs-12">
                                     <Label id="recipeLabel" class="form-control">Prep Time (Minutes)</Label>
-                                    <input id="modal-input" type="number" name="PrepTime" class="form-control" placeholder="..." />
+                                    <input id="modal-input" type="number" name="prepTime" class="form-control" placeholder="..." />
 
                                 </div>
 
                                 <div class="col-md-4 col-xs-12">
                                     <Label id="recipeLabel" class="form-control">Servings</Label>
 
-                                    <input id="modal-input" type="number" name="RecipeTitle" class="form-control" placeholder="..." />
+                                    <input id="modal-input" type="number" name="servings" class="form-control" placeholder="..." />
                                 </div>
 
                                 <div class="col-md-4 col-xs-12">
                                     <Label id="recipeLabel" class="form-control">Calories</Label>
 
-                                    <input id="modal-input" type="number" name="RecipeTitle" class="form-control" placeholder="..." />
+                                    <input id="modal-input" type="number" name="calories" class="form-control" placeholder="..." />
                                 </div>
 
                                 <div class="col-md-12 col-xs-12">
                                     <Label id="recipeLabel" class="form-control">Image URL</Label>
-                                    <input id="modal-preview-image" type="url" name="RecipeTitle" class="form-control" placeholder="..." />
+                                    <input id="modal-preview-image" type="url" name="imageURL" class="form-control" placeholder="..." />
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary" id="modalSubmitButton">Save changes</button>
                                 </div>
 
                             </form>
                         </div>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary" id="modalSubmitButton">Save changes</button>
-                    </div>
+                    
                 </div>
             </div>
         </div>
