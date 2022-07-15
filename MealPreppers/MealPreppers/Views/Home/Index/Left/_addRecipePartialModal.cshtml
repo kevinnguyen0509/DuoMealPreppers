@@ -44,18 +44,16 @@
 
 
                         <div class="modal-body col-xs-12">
-                            <form id="add-recipe-modal-form" action="/Home/" type="post">
+                            <form id="add-recipe-modal-form" @*action="Home/AddRecipe"*@ type="post">
                                 <div class="col-md-12 col-xs-12">
                                     <Label id="recipeLabel" class="form-control">Recipe Title</Label>
-                                    <input value="" maxlength="40" id="modal-input-title" type="text" name="recipeTitle" class="form-control" placeholder="..." />
+                                    <input value="" maxlength="40" id="modal-input-title" type="text" name="title" class="form-control" placeholder="..." />
                                 </div>
 
                                 <div class="col-md-12 col-xs-12">
                                     <Label id="recipeLabel" class="form-control">Recipe Description</Label>
-                                    <input id="modal-description-preview" type="text" name="recipeDesc" class="form-control" placeholder="..." />
+                                    <input id="modal-description-preview" type="text" name="description" class="form-control" placeholder="..." maxlength="40" />
                                 </div>
-
-
 
                                 <div class="col-md-12 col-xs-12">
                                     <Label id="recipeLabel" class="form-control">Ingredients</Label>

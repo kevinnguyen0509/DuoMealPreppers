@@ -1,4 +1,6 @@
-﻿let modalSubmitButton = document.getElementById('modalSubmitButton');
+﻿
+
+let modalSubmitButton = document.getElementById('modalSubmitButton');
 let previewTitle = document.getElementById('card-title-preview');
 let previewDescription = document.getElementById('previewDescription');
 let previewImage = document.getElementById('previewImage');
@@ -8,18 +10,51 @@ const modalForm = document.getElementById('add-recipe-modal-form');
 
 
 
+//modalForm.addEventListener('submit', callBack);
+
+//function callBack(event) {
+//    console.log("hi");
+//    event.preventDefault();
+//    const myFormData = new FormData(event.target);
+
+//    /*const formDataObj = {};*/
+//   /* myFormData.forEach((value, key) => (formDataObj[key] = value));*/
+
+//    const formDataObj = Object.fromEntries(myFormData.entries());
+//    console.log(formDataObj); 
+
+    
+
+//    var test = JSON.stringify(formDataObj);
+
+//    $.ajax({
+
+//        type: "post",
+//        data: test,
+//        url: "Home/AddRecipe",
+//        success: console.log(json),
+        
+
+
+//    });
+//};
+
+//}
 modalForm.addEventListener('submit', callBack);
-
 function callBack(event) {
-    console.log("hi");
-    event.preventDefault();
-    const myFormData = new FormData(event.target);
-
-    const formDataObj = {};
-    myFormData.forEach((value, key) => (formDataObj[key] = value));
-    console.log(formDataObj); 
-
-}
+    event.preventDefault(); // prevent actual form submit
+    var form = $(this);
+    console.log(form);
+    
+    $.ajax({
+        type: "POST",
+        url: "Home/AddRecipe",
+        data: form.serialize(), // serializes form input
+        success: function (data) {
+            console.log(data);
+        }
+    });
+};
 
 
 

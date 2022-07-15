@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MealPreppers.DataFactory;
+using MealPreppers.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +10,8 @@ namespace MealPreppers.Controllers
 {
     public class HomeController : Controller
     {
+        SaveRecipe saveRecipe = new SaveRecipe();
+
         public string MyProfilePath = "~/Views/Home/MyProfile/Myprofile.cshtml";
         public string LoginPath = "~/Views/Home/Login/Login.cshtml";
         public string IndexPath = "~/Views/Home/Index/Index.cshtml";
@@ -43,10 +47,33 @@ namespace MealPreppers.Controllers
             return View(LoginPath);
         }
 
-        public ActionResult AddRecipe()
+        //public ActionResult AddRecipe(string title, string description, string ingredients, string instructions, int prepTime, int servings, int calories, string imageURL)
+        //{
+        //    AddRecipe addRecipe = new AddRecipe();
+        //    addRecipe.title = title;
+        //    addRecipe.description = description;
+        //    addRecipe.ingredients = ingredients;
+        //    addRecipe.instructions = instructions;
+        //    addRecipe.prepTime = prepTime;
+        //    addRecipe.servings = servings;
+        //    addRecipe.calories = calories;
+        //    addRecipe.imageURL = imageURL;
+           
+
+            
+        //    return View(IndexPath);
+        //}
+
+        public ActionResult AddRecipe(AddRecipe addRecipe)
         {
+
+
+            saveRecipe.SaveNewRecipe(addRecipe);
+
             return View(IndexPath);
         }
+
+
 
     }
 }
