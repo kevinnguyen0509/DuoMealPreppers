@@ -130,6 +130,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\CustomCss\Discover\Middle\FoodFinder.css" />
     <Content Include="Content\CustomCss\FriendFeed\Middle\FriendFeedCSS.css" />
     <Content Include="Content\Vendor\bootstrap-theme.css" />
     <Content Include="Content\Vendor\bootstrap-theme.min.css" />
@@ -193,6 +194,7 @@
     <Content Include="Views\Home\Feed\Feed.cshtml" />
     <Content Include="Views\Home\Feed\_FeedPartial.cshtml" />
     <Content Include="Views\Home\Index\Left\_addRecipePartialModal.cshtml" />
+    <Content Include="Views\Home\Discover\_DiscoverPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

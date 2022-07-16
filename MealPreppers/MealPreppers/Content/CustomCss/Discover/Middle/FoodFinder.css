@@ -1,0 +1,45 @@
+﻿#DiscoverMiddle{
+    border:solid;
+    border-width:5px;
+    border-color:red;
+}
+#discoverHeader{
+    justify-content:center;
+}
+#discoverFoodContainer {
+    height: 700px;
+    width: 400px;
+    background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4em;
+    padding-top: 7em;
+    padding-left: 3em;
+    padding-right: 4em;
+    color: black;
+}
+.header {
+    border: solid;
+    border-width: 5px;
+    border-color: black;
+    background-color: #0F0F2C;
+    color: #27A761;
+}
+.buttons {
+    background-color: #0F0F2C;
+    border: 1px solid green;
+    color: #27A761;
+    padding: 10px 24px;
+    cursor: pointer;
+    width:100%;
+}
+#photo{
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
+    height:auto;
+}
+img{
+    max-height:80%;
+    max-width:100%;
+}

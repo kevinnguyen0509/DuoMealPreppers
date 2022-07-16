@@ -1,17 +1,28 @@
-﻿@{
-    ViewBag.Title = "Discover";
-}
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+﻿
+<div class="row">
+    <div class="col-md-2" id="IndexLeftSide">
+        <div class=" col-md-12">
+            @Html.Partial("~/Views/Home/Index/Left/_leftTopPanel.cshtml")
+        </div>
+        <div class="col-md-12">
+            @Html.Partial("~/Views/Home/Index/Left/_leftBottomPanel.cshtml")
+        </div>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+    </div>
+    <div class="col-md-8">
+        @Html.Partial("~/Views/Home/Discover/_DiscoverPartial.cshtml")
+
+    </div>
+    <div class="col-md-2" id="IndexRightSide">
+        <div id="RightSideHeaderContainer">
+            <div id="HeaderImageContainer">
+                <img src="~/Content/Images/ricebowl.png" class="image" />
+            </div>
+            <h3 id="RightHeaderDetailFontOne" class="HeaderSecondaryFontColor">Yummy</h3>
+            <h3 class="HeaderFontColor">Details</h3>
+
+        </div>
+        @Html.Partial("~/Views/Home/Index/Right/_RightDetailsPanel.cshtml")
+    </div>
+</div>
