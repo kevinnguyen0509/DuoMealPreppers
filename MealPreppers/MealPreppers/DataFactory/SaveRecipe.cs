@@ -10,7 +10,7 @@ namespace MealPreppers.DataFactory
 {
     public class SaveRecipe
     {
-        public ResultMessage SaveNewRecipe(AddRecipe addRecipe)
+        public ResultMessage SaveNewRecipe(RecipeItem addRecipe)
         {
 
             ResultMessage resultMessage = new ResultMessage();

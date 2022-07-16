@@ -5,7 +5,7 @@ using System.Web;
 
 namespace MealPreppers.Models
 {
-    public class AddRecipe
+    public class RecipeItem 
     {
         public int ID { get; set; }
         public string title { get; set; }
@@ -16,5 +16,7 @@ namespace MealPreppers.Models
         public int servings { get; set; }
         public int calories { get; set; }
         public string imageURL { get; set; }
+
+        
     }
 }

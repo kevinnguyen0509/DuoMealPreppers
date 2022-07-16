@@ -11,6 +11,7 @@ namespace MealPreppers.Controllers
     public class HomeController : Controller
     {
         SaveRecipe saveRecipe = new SaveRecipe();
+        GetAllRecipes GetAllRecipes = new GetAllRecipes();
 
         public string MyProfilePath = "~/Views/Home/MyProfile/Myprofile.cshtml";
         public string LoginPath = "~/Views/Home/Login/Login.cshtml";
@@ -19,7 +20,11 @@ namespace MealPreppers.Controllers
         public string FeedPath = "~/Views/Home/Feed/Feed.cshtml";
         public ActionResult Index()
         {
-            return View(IndexPath);
+            RecipeItem recipeItem = new RecipeItem();
+            List<RecipeItem> recipeList = GetAllRecipes.GrabRecipeList(recipeItem);
+
+
+            return View(IndexPath, recipeList);
         }
 
         public ActionResult MyProfile()
@@ -64,7 +69,7 @@ namespace MealPreppers.Controllers
         //    return View(IndexPath);
         //}
 
-        public ActionResult AddRecipe(AddRecipe addRecipe)
+        public ActionResult AddRecipe(RecipeItem addRecipe)
         {
 
 

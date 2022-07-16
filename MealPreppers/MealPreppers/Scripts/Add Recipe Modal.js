@@ -50,10 +50,13 @@ function callBack(event) {
         type: "POST",
         url: "Home/AddRecipe",
         data: form.serialize(), // serializes form input
-        success: function (data) {
-            console.log(data);
-        }
+        success: alert("pog"),
+        error: alert("not pog")
     });
+
+    $('#exampleModal').load(document.URL + ' #exampleModal');
+    $('#grid-container').load(document.URL + ' #grid-container');
+
 };
 
 
