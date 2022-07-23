@@ -18,9 +18,12 @@ namespace MealPreppers.Controllers
         public string IndexPath = "~/Views/Home/Index/Index.cshtml";
         public string DiscoverPath = "~/Views/Home/Discover/Discover.cshtml";
         public string FeedPath = "~/Views/Home/Feed/Feed.cshtml";
+        public string GridPartial = "~/Views/Home/Index/Middle/_GridView.cshtml";
+
         public ActionResult Index()
         {
             RecipeItem recipeItem = new RecipeItem();
+           
             List<RecipeItem> recipeList = GetAllRecipes.GrabRecipeList(recipeItem);
 
 
@@ -69,15 +72,18 @@ namespace MealPreppers.Controllers
         //    return View(IndexPath);
         //}
 
-        public ActionResult AddRecipe(RecipeItem addRecipe)
+        public JsonResult AddRecipe(RecipeItem addRecipe)
         {
 
+            ResultMessage message = saveRecipe.SaveNewRecipe(addRecipe);
 
-            saveRecipe.SaveNewRecipe(addRecipe);
+            
 
-            return View(IndexPath);
+            return Json(message);
+
         }
 
+       
 
 
     }

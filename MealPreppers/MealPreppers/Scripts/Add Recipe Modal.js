@@ -6,8 +6,9 @@ let previewDescription = document.getElementById('previewDescription');
 let previewImage = document.getElementById('previewImage');
 
 const modalForm = document.getElementById('add-recipe-modal-form');
+const modalSUBMIT = document.getElementById('modalSubmitButton');
 
-
+const modalClose = document.getElementById('Modalclose');
 
 
 //modalForm.addEventListener('submit', callBack);
@@ -44,23 +45,38 @@ modalForm.addEventListener('submit', callBack);
 function callBack(event) {
     event.preventDefault(); // prevent actual form submit
     var form = $(this);
-    console.log(form);
+   // console.log(form);
     
     $.ajax({
         type: "POST",
         url: "Home/AddRecipe",
         data: form.serialize(), // serializes form input
-        success: alert("pog"),
-        error: alert("not pog")
+        success: function (e) {
+            $("#grid-container").load("/Home/Index #grid-layout");        },
+        error: console.log("not pog")
     });
 
-    $('#exampleModal').load(document.URL + ' #exampleModal');
-    $('#grid-container').load(document.URL + ' #grid-container');
+   // location.reload(location.href);
 
+    
+    //$('#grid-layout').load(" Home/Index #grid-layout", function () {
+    //    alert("Loaded");
+
+    //});
+/*$("#grid-layout").load(location.href + " #grid-layout");*/
+
+    
 };
 
+modalSUBMIT.addEventListener('click', divReload);
 
+function divReload() {
 
+    console.log("poggers");
+    
+
+   // $("#grid-layout").load("Home/Index #grid-layout");
+}
 
 
 

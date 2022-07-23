@@ -1,6 +1,7 @@
 ﻿@model List<MealPreppers.Models.RecipeItem>
 
 
+
 <link rel="stylesheet" type="text/css" href="~/Content/CustomCss/Index/GridView/GridCss.css" />
 <div id="grid-container">
     <div id="grid-layout">
@@ -11,9 +12,10 @@
                 <h2>Pog Burger</h2>
                 <p>This burger is super easy to make and tastes super pog!</p>
             </div>*@
-
-        @Html.Partial("~/Views/Home/Index/Middle/_GridItemPartial.cshtml", Model)
-
+        
+        
+            @Html.Partial("~/Views/Home/Index/Middle/_GridItemPartial.cshtml", Model)
+        
 
         @*<div class="grid-item">
                 <div class="card" style="width: 100%;">

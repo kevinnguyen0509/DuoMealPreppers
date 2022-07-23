@@ -1,28 +1,29 @@
 ﻿@model List<MealPreppers.Models.RecipeItem>
 
-@for (int i = 0; i < Model.Count; i++)
-{
-    if (Model[i].ID == null)
-    { }
-    else
-    {
-<div class="grid-item">
-    <div class="card" style="width: 100%;">
-        <div class="grid-image-container">
-            <img class="card-img-top" src="@Model[i].imageURL" alt="user uploaded image"/>
 
-        </div>
-        <div class="card-body">
-            <div class="grid-card-title">
-                <h5 class="card-title">@Model[i].title</h5>
-            </div>
-            <div class="recipeDescContainer">
-                <p class="card-text">@Model[i].description</p>
-            </div>
-            <a href="#" class="btn btn-primary grid-button">Take a look</a>
-        </div>
-    </div>
-</div>
+               
+                   @for (int i = 0; i < Model.Count; i++)
+                   {
 
-        }
-    }
+                   <div class="grid-item">
+                       <div class="card" style="width: 100%;">
+                           <div class="grid-image-container">
+                               <img class="card-img-top" src="@Model[i].imageURL" alt="user uploaded image" />
+
+                           </div>
+                           <div class="card-body">
+                               <div class="grid-card-title">
+                                   <h5 class="card-title">@Model[i].title</h5>
+                               </div>
+                               <div class="recipeDescContainer">
+                                   <p class="card-text">@Model[i].description</p>
+                               </div>
+                               <a href="#" class="btn btn-primary grid-button">Take a look</a>
+                           </div>
+                       </div>
+                   </div>
+
+
+                   }
+               
+    

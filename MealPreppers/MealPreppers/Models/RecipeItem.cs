@@ -5,7 +5,7 @@ using System.Web;
 
 namespace MealPreppers.Models
 {
-    public class RecipeItem 
+    public class RecipeItem : ResultMessage
     {
         public int ID { get; set; }
         public string title { get; set; }

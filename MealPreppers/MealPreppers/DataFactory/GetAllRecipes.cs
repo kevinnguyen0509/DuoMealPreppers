@@ -21,6 +21,9 @@ namespace MealPreppers.DataFactory
             SqlDataReader SQLRec;
             SQLComm.CommandType = CommandType.StoredProcedure;
 
+            SQLRec = SQLComm.ExecuteReader();
+
+
             try
             {
 
@@ -28,7 +31,6 @@ namespace MealPreppers.DataFactory
 
 
 
-                SQLRec = SQLComm.ExecuteReader();
 
 
 
@@ -59,10 +61,23 @@ namespace MealPreppers.DataFactory
 
                 recipeList.Add(new RecipeItem
                 {
-                    title = "Oops, something went wrong!" + e.Message,
-                    description = "Failed"
-                });
+                    ID = SQLRec.GetInt32(SQLRec.GetOrdinal("ID")),
+                    title = SQLRec.IsDBNull(SQLRec.GetOrdinal("title")) == true ? "NO TITLE ENTERED" : SQLRec.GetString(SQLRec.GetOrdinal("title")),
+                    description = SQLRec.GetString(SQLRec.GetOrdinal("Description")),
+                    ingredients = SQLRec.IsDBNull(SQLRec.GetOrdinal("Ingredients")) == true ? "NO INGREDIENTS ENTERED" : SQLRec.GetString(SQLRec.GetOrdinal("Ingredients")),
+                    imageURL = SQLRec.IsDBNull(SQLRec.GetOrdinal("ImageURL")) == true ? "https://cu-rise.com/wp-content/themes/appon/assets/images/no-image/No-Image-Found-400x264.png" : SQLRec.GetString(SQLRec.GetOrdinal("ImageURL")),
+                    prepTime = SQLRec.IsDBNull(SQLRec.GetOrdinal("PrepTime")) == true ? 0 : SQLRec.GetInt32(SQLRec.GetOrdinal("PrepTime")),
 
+                    instructions = SQLRec.IsDBNull(SQLRec.GetOrdinal("Instructions")) == true ? "NO INSTRUCTIONS FOUND" : SQLRec.GetString(SQLRec.GetOrdinal("Instructions")),
+
+                    
+                    
+                    servings = SQLRec.GetInt32(SQLRec.GetOrdinal("Servings")),
+                    calories = SQLRec.GetInt32(SQLRec.GetOrdinal("Calories")),
+                    ReturnMessage = "Oops, something went wrong!" + e.Message,
+                    ReturnStatus = "Failed"
+                });;
+                
             }
             finally
             {
