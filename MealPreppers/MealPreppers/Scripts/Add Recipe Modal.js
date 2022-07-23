@@ -6,9 +6,7 @@ let previewDescription = document.getElementById('previewDescription');
 let previewImage = document.getElementById('previewImage');
 
 const modalForm = document.getElementById('add-recipe-modal-form');
-const modalSUBMIT = document.getElementById('modalSubmitButton');
-
-const modalClose = document.getElementById('Modalclose');
+let alert = document.getElementById('modalAlert');
 
 
 //modalForm.addEventListener('submit', callBack);
@@ -39,6 +37,10 @@ const modalClose = document.getElementById('Modalclose');
 
 //    });
 //};
+function pog() {
+    alert.classList.add("hide");
+}
+
 
 //}
 modalForm.addEventListener('submit', callBack);
@@ -52,7 +54,11 @@ function callBack(event) {
         url: "Home/AddRecipe",
         data: form.serialize(), // serializes form input
         success: function (e) {
-            $("#grid-container").load("/Home/Index #grid-layout");        },
+            $("#grid-container").load("/Home/Index #grid-layout");
+            alert.classList.remove("hide");
+            setTimeout(pog, 5000);
+
+            },
         error: console.log("not pog")
     });
 
@@ -68,15 +74,7 @@ function callBack(event) {
     
 };
 
-modalSUBMIT.addEventListener('click', divReload);
 
-function divReload() {
-
-    console.log("poggers");
-    
-
-   // $("#grid-layout").load("Home/Index #grid-layout");
-}
 
 
 
