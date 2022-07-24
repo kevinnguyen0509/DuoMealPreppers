@@ -6,6 +6,7 @@ let previewDescription = document.getElementById('previewDescription');
 let previewImage = document.getElementById('previewImage');
 
 const modalForm = document.getElementById('add-recipe-modal-form');
+
 let alert = document.getElementById('modalAlert');
 
 
@@ -39,6 +40,7 @@ let alert = document.getElementById('modalAlert');
 //};
 function pog() {
     alert.classList.add("hide");
+    modalSubmitButton.disabled = false;
 }
 
 
@@ -56,6 +58,8 @@ function callBack(event) {
         success: function (e) {
             $("#grid-container").load("/Home/Index #grid-layout");
             alert.classList.remove("hide");
+            modalSubmitButton.disabled = true;
+            modalForm.reset();
             setTimeout(pog, 5000);
 
             },
