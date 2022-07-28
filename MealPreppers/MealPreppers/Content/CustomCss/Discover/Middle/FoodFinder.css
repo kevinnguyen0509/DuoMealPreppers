@@ -7,16 +7,17 @@
     justify-content:center;
 }
 #discoverFoodContainer {
-    height: 700px;
-    width: 400px;
+    height: 800px;
+    width: 500px;
     background-repeat: no-repeat;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 4em;
-    padding-top: 7em;
-    padding-left: 3em;
+    margin-top: 2em;
+    padding-top: 4em;
+    padding-left: 4em;
     padding-right: 4em;
     color: black;
+    background-color:beige;
 }
 .header {
     border: solid;
@@ -25,14 +26,7 @@
     background-color: #0F0F2C;
     color: #27A761;
 }
-.buttons {
-    background-color: #0F0F2C;
-    border: 1px solid green;
-    color: #27A761;
-    padding: 10px 24px;
-    cursor: pointer;
-    width:100%;
-}
+
 #photo{
     background-repeat:no-repeat;
     background-position:center;
@@ -42,4 +36,51 @@
 img{
     max-height:80%;
     max-width:100%;
+
+}
+.foodCards {
+
+    color: #27A761;
+}
+#foodName {
+    display: inline-block;
+    font-size: 15px;
+    float: left;
+    width:180px;
+    text-overflow:ellipsis;
+}
+
+#CookTime {
+    display: inline-block;
+    width:180px;
+    float: right;
+    font-size: 15px;
+}
+.buttons {
+    background-color: #0F0F2C;
+    border: 1px solid green;
+    color: #27A761;
+    padding: 10px 24px;
+    cursor: pointer;
+    width: 100%;
+    height:10%;
+}
+#butt-yes {
+    float: right;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+#butt-nope{
+    float:left;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    color:red;
 }
