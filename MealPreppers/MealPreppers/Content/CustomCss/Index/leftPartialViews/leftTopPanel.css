@@ -136,9 +136,11 @@ textarea {
 
 .modal-preview{
     display: flex;
-    align-items: center;
+    align-items: center !important;
     justify-content: center;
-    margin-bottom: 200px;
+   /*margin-bottom: 200px;*/
+   align-content: center !important;
+   margin-bottom: 85%;
     
 }
 
@@ -149,3 +151,4 @@ textarea {
     align-content: center;*/
     margin-bottom: 0px;
 }
+
