@@ -196,6 +196,7 @@
     <Content Include="Views\Home\Feed\_FeedPartial.cshtml" />
     <Content Include="Views\Home\Index\Left\_addRecipePartialModal.cshtml" />
     <Content Include="Views\Home\Discover\_DiscoverPartial.cshtml" />
+    <Content Include="Views\Home\Index\Middle\_GridItemPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
