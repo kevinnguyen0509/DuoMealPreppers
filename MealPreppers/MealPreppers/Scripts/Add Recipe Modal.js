@@ -7,7 +7,7 @@ let previewImage = document.getElementById('previewImage');
 
 const modalForm = document.getElementById('add-recipe-modal-form');
 
-let alert = document.getElementById('modalAlert');
+let newAlert = document.getElementById('modalAlert');
 
 
 //modalForm.addEventListener('submit', callBack);
@@ -39,7 +39,7 @@ let alert = document.getElementById('modalAlert');
 //    });
 //};
 function pog() {
-    alert.classList.add("hide");
+    newAlert.classList.add("hide");
     modalSubmitButton.disabled = false;
 }
 
@@ -57,7 +57,7 @@ function callBack(event) {
         data: form.serialize(), // serializes form input
         success: function (e) {
             $("#grid-container").load("/Home/Index #grid-layout");
-            alert.classList.remove("hide");
+            newAlert.classList.remove("hide");
             modalSubmitButton.disabled = true;
             modalForm.reset();
             setTimeout(pog, 5000);
@@ -88,7 +88,7 @@ function callBack(event) {
 let newTitle = document.getElementById('modal-input-title'); // Preview Title
 
 newTitle.addEventListener('keyup', function () {
-    //console.log(newTitle.value);
+    
     previewTitle.innerHTML = newTitle.value;
            
 
@@ -97,7 +97,7 @@ newTitle.addEventListener('keyup', function () {
 let newDescription = document.getElementById('modal-description-preview'); // Preview Desc
 
 newDescription.addEventListener('keyup', function () {
-    console.log(newDescription.value);
+    
     previewDescription.innerHTML = newDescription.value;
 
 });
@@ -105,23 +105,64 @@ newDescription.addEventListener('keyup', function () {
 let newImage = document.getElementById('modal-preview-image'); // Preview Image
 
 newImage.addEventListener('keyup', function () {
-    console.log(newImage.value);
+    
     previewImage.src = newImage.value;
 
 });
 
+// Add ingredient input
 
-//$("form").submit(function (e) {
-//     e.preventDefault(); // Prevents the form from submitting
-        
-//    formData.append("recipeTitle", previewTitle.innerHTML);
-//    console.log(formData.get("recipeTitle"))
+let ingContainer = $("#ingredientsContainer");
+let add_ingred = $("#addIngredientButton");
+let max_ing = 10;
+let ingCount = 0;
 
-//})
+$(add_ingred).click(function (e) {
+    e.preventDefault();
+    if (ingCount < max_ing) {
+        ingCount++;
+        $(ingContainer).append('<div><input class="form-control" type="text" name="ingredients" placeholder="..." /><a href="#" id="deleteItemText" class="delete">Remove Ingredient Above</a></div>');
+    }
+    else {
+        alert("Max ingredients posted, add additional smaller ingredients in instructions");
+    }
 
 
+});
+
+$(ingContainer).on("click", ".delete", function (e) {
+    e.preventDefault();
+    $(this).parent('div').remove();
+    ingCount--;
+
+});
+
+// Add instruction input
+
+let instrContainer = $("#instructionsContainer");
+let add_instr = $("#addInstructionsButton");
+let max_instr = 10;
+let instrCount = 0;
+
+$(add_instr).click(function (e) {
+    e.preventDefault();
+    if (instrCount < max_instr) {
+        instrCount++;
+        $(instrContainer).append('<div><textarea rows="3" class="form-control" name="instructions" placeholder="..." ></textarea><a href="#" id="deleteItemText" class="delete">Remove Step Above</a></div>');
+    }
+    else {
+        alert("Max steps added, we recommend merging smaller steps together for page room purposes");
+    }
 
 
+});
+
+$(instrContainer).on("click", ".delete", function (e) {
+    e.preventDefault();
+    $(this).parent('div').remove();
+    instrCount--;
+
+});
 
 
 

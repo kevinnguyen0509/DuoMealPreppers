@@ -1,5 +1,4 @@
-﻿alert("You can click and drag this shit pretty damn POG!");
-
+﻿
 var slider = document.querySelectorAll(".scroll");
 
 

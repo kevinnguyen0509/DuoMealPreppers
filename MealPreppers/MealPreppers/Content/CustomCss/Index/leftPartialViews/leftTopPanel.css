@@ -136,11 +136,12 @@ textarea {
 
 .modal-preview{
     display: flex;
-    align-items: center !important;
+    align-items: center;
     justify-content: center;
    /*margin-bottom: 200px;*/
-   align-content: center !important;
-   margin-bottom: 85%;
+   
+   margin-bottom: 50%;
+   margin-top: 20%;
     
 }
 
@@ -152,3 +153,11 @@ textarea {
     margin-bottom: 0px;
 }
 
+#deleteItemText{
+    font-size: 11px;
+    color: dimgrey;
+}
+
+#firstIngInput{
+    margin-bottom: 15px;
+}
