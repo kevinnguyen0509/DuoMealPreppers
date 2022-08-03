@@ -10,6 +10,9 @@ const modalForm = document.getElementById('add-recipe-modal-form');
 let newAlert = document.getElementById('modalAlert');
 
 
+
+
+
 //modalForm.addEventListener('submit', callBack);
 
 //function callBack(event) {
@@ -90,7 +93,10 @@ let newTitle = document.getElementById('modal-input-title'); // Preview Title
 newTitle.addEventListener('keyup', function () {
     
     previewTitle.innerHTML = newTitle.value;
-           
+
+   
+
+    
 
 });
 
@@ -99,6 +105,7 @@ let newDescription = document.getElementById('modal-description-preview'); // Pr
 newDescription.addEventListener('keyup', function () {
     
     previewDescription.innerHTML = newDescription.value;
+
 
 });
 
@@ -110,7 +117,7 @@ newImage.addEventListener('keyup', function () {
 
 });
 
-// Add ingredient input
+//// Add ingredient input
 
 let ingContainer = $("#ingredientsContainer");
 let add_ingred = $("#addIngredientButton");
@@ -137,18 +144,21 @@ $(ingContainer).on("click", ".delete", function (e) {
 
 });
 
-// Add instruction input
+//// Add instruction input
 
 let instrContainer = $("#instructionsContainer");
 let add_instr = $("#addInstructionsButton");
 let max_instr = 10;
 let instrCount = 0;
 
+let steps = 1;
+
 $(add_instr).click(function (e) {
     e.preventDefault();
     if (instrCount < max_instr) {
         instrCount++;
-        $(instrContainer).append('<div><textarea rows="3" class="form-control" name="instructions" placeholder="..." ></textarea><a href="#" id="deleteItemText" class="delete">Remove Step Above</a></div>');
+        steps++;
+        $(instrContainer).append('<div class="instructionStep">Step ' + steps + ':<textarea rows="3" class="form-control" name="instructions" placeholder="..." ></textarea>' + '</div>'); //<a href="#" id="deleteItemText" class="delete">Remove Step Above</a></div>');
     }
     else {
         alert("Max steps added, we recommend merging smaller steps together for page room purposes");
@@ -160,10 +170,31 @@ $(add_instr).click(function (e) {
 $(instrContainer).on("click", ".delete", function (e) {
     e.preventDefault();
     $(this).parent('div').remove();
+    
     instrCount--;
+    steps--;
 
 });
 
+// Remove ingredients button
+
+let removeIngr = document.getElementById("removeInstructionsButton");
+
+removeIngr.addEventListener("click", function (e) {
+    var getIngredients = document.querySelectorAll(".instructionStep");
+
+    if (getIngredients.length > 0) {
+        console.log(getIngredients.length);
+        getIngredients[getIngredients.length - 1].remove();
+        steps--;
+    }
+    else {
+        console.log("Not poggers");
+        console.log(getIngredients.length);
+    }
+
+
+});
 
 
 

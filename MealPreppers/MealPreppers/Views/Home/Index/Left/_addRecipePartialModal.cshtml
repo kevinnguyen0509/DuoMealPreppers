@@ -68,10 +68,13 @@
                         <div class="col-md-12 col-xs-12">
                             <Label id="recipeLabel" class="form-control">Ingredients</Label>
 
+
                             <div id="ingredientsContainer">
-                                <input id="firstIngInput" class="form-control" type="text" name="ingredients" placeholder="..." />
+                                <input id="firstIngInput" class="form-control" type="text" name="ingredients" placeholder="Type Ingredient Here!" />
                             </div>
+
                             <button type="button" id="addIngredientButton">Add ingredient &nbsp;</button>
+
 
                         </div>
 
@@ -84,9 +87,11 @@
                             <button type="button" id="addInstructionsButton">Add a step &nbsp;</button>*@
 
                             <div id="instructionsContainer">
+                                <div>Step 1:</div>
                                 <textarea rows="3" id="firstIngInput" class="form-control" name="instructions" placeholder="..." ></textarea>
                             </div>
                             <button type="button" id="addInstructionsButton">Add a step &nbsp;</button>
+                            <button type="button" id="removeInstructionsButton">Delete last step &nbsp;</button>
 
                             @*<textarea rows="5" class="form-control" name="ingredients" placeholder="..."></textarea>*@
 
