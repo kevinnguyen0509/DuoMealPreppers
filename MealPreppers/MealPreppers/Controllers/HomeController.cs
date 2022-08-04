@@ -19,6 +19,7 @@ namespace MealPreppers.Controllers
         public string DiscoverPath = "~/Views/Home/Discover/Discover.cshtml";
         public string FeedPath = "~/Views/Home/Feed/Feed.cshtml";
         public string GridPartial = "~/Views/Home/Index/Middle/_GridView.cshtml";
+        Random rnd = new Random();
 
         public ActionResult Index()
         {
@@ -45,10 +46,16 @@ namespace MealPreppers.Controllers
 
         public ActionResult Discover()
         {
-            ViewBag.Message = "Your contact page.";
 
-            return View(DiscoverPath);
+            RecipeItem recipeItem = new RecipeItem();
+
+            List<RecipeItem> recipeList = GetAllRecipes.GrabRecipeList(recipeItem);
+            
+
+            return View(DiscoverPath,recipeList);
         }
+
+
 
         public ActionResult Login()
         {
