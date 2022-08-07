@@ -42,7 +42,7 @@
                                 <div class="recipeDescContainer">
                                     <p id="previewDescription" class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 </div>
-                                <a href="#" class="btn btn-primary grid-button">Take a look</a>
+                                <a href="#" class="btn btn-primary">Take a look</a>
                             </div>
                         </div>
                     </div>
@@ -62,15 +62,17 @@
 
                         <div class="col-md-12 col-xs-12">
                             <Label id="recipeLabel" class="form-control">Recipe Description</Label>
-                            <input id="modal-description-preview" type="text" name="description" class="form-control" placeholder="..." maxlength="40" />
+                            <textarea rows="2" id="modal-description-preview" name="description" class="form-control" placeholder="..." maxlength="100"></textarea>
                         </div>
+                        
+
 
                         <div class="col-md-12 col-xs-12">
                             <Label id="recipeLabel" class="form-control">Ingredients</Label>
 
 
                             <div id="ingredientsContainer">
-                                <input id="firstIngInput" class="form-control" type="text" name="ingredients" placeholder="Type Ingredient Here!" />
+                                <input id="firstIngInput" class="form-control ingredientsValue" type="text" name="ingredients" placeholder="Type Ingredient Here!" />
                             </div>
 
                             <button type="button" id="addIngredientButton">Add ingredient &nbsp;</button>
@@ -82,13 +84,13 @@
                             <Label id="recipeLabel" class="form-control">Instructions</Label>
 
                             @*<div id="instructionsContainer">
-                                <input id="firstIngInput" class="form-control" type="text" name="instructions" placeholder="..." />
-                            </div>
-                            <button type="button" id="addInstructionsButton">Add a step &nbsp;</button>*@
+                <input id="firstIngInput" class="form-control" type="text" name="instructions" placeholder="..." />
+            </div>
+            <button type="button" id="addInstructionsButton">Add a step &nbsp;</button>*@
 
-                            <div id="instructionsContainer">
+                            <div id="instructionsContainer" class="instructionStep">
                                 <div>Step 1:</div>
-                                <textarea rows="3" id="firstIngInput" class="form-control" name="instructions" placeholder="..." ></textarea>
+                                <textarea rows="3" id="firstInstructionInput" class="form-control instructionValue" name="instructions" placeholder="..."></textarea>
                             </div>
                             <button type="button" id="addInstructionsButton">Add a step &nbsp;</button>
                             <button type="button" id="removeInstructionsButton">Delete last step &nbsp;</button>
@@ -132,4 +134,4 @@
     </div>
 </div>
 
-<script src="~/Scripts/Add Recipe Modal.js"></script>
+<script src="~/Scripts/Add Recipe Modal.js" type="module"></script>

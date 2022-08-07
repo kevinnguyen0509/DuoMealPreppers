@@ -1,4 +1,4 @@
-﻿
+﻿import { attachButtons } from '../Scripts/Get Recipe Details for Right Side.js'
 
 let modalSubmitButton = document.getElementById('modalSubmitButton');
 let previewTitle = document.getElementById('card-title-preview');
@@ -44,6 +44,7 @@ let newAlert = document.getElementById('modalAlert');
 function pog() {
     newAlert.classList.add("hide");
     modalSubmitButton.disabled = false;
+
 }
 
 
@@ -51,23 +52,76 @@ function pog() {
 modalForm.addEventListener('submit', callBack);
 function callBack(event) {
     event.preventDefault(); // prevent actual form submit
-    var form = $(this);
+    
    // console.log(form);
+
+    //Update Instuctions
+
+    var allInstructionsSeparatedByCarrot = "";
+    var getAllInstructions = document.querySelectorAll(".instructionValue");
+    for (var i = 0; i < getAllInstructions.length; i++) {
+        if (getAllInstructions[i].value != "") {
+            allInstructionsSeparatedByCarrot += getAllInstructions[i].value + "^ ";
+            console.log(allInstructionsSeparatedByCarrot);
+            
+        }
+        else {
+            console.log("empty field");
+        }
+    }
+
+    var allInstructions = document.getElementById("firstInstructionInput");
+    allInstructions.value = allInstructionsSeparatedByCarrot;
+    console.log(allInstructions.value);
+
+    // Update Ingredients
+    {
+        var allIngredsSeparatedByCarrot = "";
+        var getAllIngredients = document.querySelectorAll(".ingredientsValue");
+        for (var i = 0; i < getAllIngredients.length; i++) {
+            if (getAllIngredients[i].value != "") {
+                allIngredsSeparatedByCarrot += getAllIngredients[i].value + "^ ";
+                console.log(allIngredsSeparatedByCarrot);
+
+            }
+            else {
+                console.log("empty field");
+            }
+        }
+    }
+
+    var allIngreds = document.getElementById("firstIngInput");
+    allIngreds.value = allIngredsSeparatedByCarrot;
+    console.log(allIngreds.value);
+
+    //$("#firstIngInput").text = allIngredientsSeparatedByCarrot;
+    //console.log($("#firstIngInput").value);
+
+    var form = $(this);
     
     $.ajax({
         type: "POST",
         url: "Home/AddRecipe",
         data: form.serialize(), // serializes form input
         success: function (e) {
-            $("#grid-container").load("/Home/Index #grid-layout");
-            newAlert.classList.remove("hide");
-            modalSubmitButton.disabled = true;
-            modalForm.reset();
-            setTimeout(pog, 5000);
+            $("#grid-container").load("/Home/Index #grid-layout", null, function () {
+                newAlert.classList.remove("hide");
+                modalSubmitButton.disabled = true;
+                console.log(form);
+                //modalForm.reset();
+                attachButtons();
+
+                setTimeout(pog, 5000);
+            });
+            
 
             },
         error: console.log("not pog")
     });
+
+
+
+   
 
    // location.reload(location.href);
 
@@ -94,8 +148,17 @@ newTitle.addEventListener('keyup', function () {
     
     previewTitle.innerHTML = newTitle.value;
 
-   
-
+    //var pog = "";
+    //var getAllIngreds = document.querySelectorAll(".instructionValue");
+    //for (var i = 0; i < getAllIngreds.length; i++) {
+    //    if (getAllIngreds[i].value != ""){
+    //        pog += getAllIngreds[i].value + "^ ";
+    //        console.log(pog);
+    //    }
+    //    else {
+    //        console.log("empty field");
+    //    }
+    //}
     
 
 });
@@ -128,7 +191,7 @@ $(add_ingred).click(function (e) {
     e.preventDefault();
     if (ingCount < max_ing) {
         ingCount++;
-        $(ingContainer).append('<div><input class="form-control" type="text" name="ingredients" placeholder="..." /><a href="#" id="deleteItemText" class="delete">Remove Ingredient Above</a></div>');
+        $(ingContainer).append('<div><input class="form-control ingredientsValue" type="text" name="ingredients" placeholder="..." /><a href="#" id="deleteItemText" class="delete">Remove Ingredient Above</a></div>');
     }
     else {
         alert("Max ingredients posted, add additional smaller ingredients in instructions");
@@ -158,7 +221,7 @@ $(add_instr).click(function (e) {
     if (instrCount < max_instr) {
         instrCount++;
         steps++;
-        $(instrContainer).append('<div class="instructionStep">Step ' + steps + ':<textarea rows="3" class="form-control" name="instructions" placeholder="..." ></textarea>' + '</div>'); //<a href="#" id="deleteItemText" class="delete">Remove Step Above</a></div>');
+        $(instrContainer).append('<div class="instructionStep">Step ' + steps + ':<textarea rows="3" class="form-control instructionValue" placeholder="..." ></textarea>' + '</div>'); //<a href="#" id="deleteItemText" class="delete">Remove Step Above</a></div>');
     }
     else {
         alert("Max steps added, we recommend merging smaller steps together for page room purposes");
@@ -195,6 +258,8 @@ removeIngr.addEventListener("click", function (e) {
 
 
 });
+
+
 
 
 

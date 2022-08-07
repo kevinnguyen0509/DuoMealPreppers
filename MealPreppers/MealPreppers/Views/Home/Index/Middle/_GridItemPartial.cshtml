@@ -1,29 +1,33 @@
 ﻿@model List<MealPreppers.Models.RecipeItem>
 
 
-               
-                   @for (int i = 0; i < Model.Count; i++)
-                   {
 
-                   <div class="grid-item">
-                       <div class="card" style="width: 100%;">
-                           <div class="grid-image-container">
-                               <img class="card-img-top" src="@Model[i].imageURL" alt="user uploaded image" />
+@for (int i = 0; i < Model.Count; i++)
+{
 
-                           </div>
-                           <div class="card-body">
-                               <div class="grid-card-title">
-                                   <h5 class="card-title">@Model[i].title</h5>
-                               </div>
-                               <div class="recipeDescContainer">
-                                   <p class="card-text">@Model[i].description</p>
-                               </div>
-                               <a href="#" class="btn btn-primary grid-button">Take a look</a>
-                           </div>
-                       </div>
-                   </div>
+    <div class="grid-item">
+        <div class="card" style="width: 100%;">
+            <div class="grid-image-container">
+                <img class="card-img-top" src="@Model[i].imageURL" alt="user uploaded image" />
+
+            </div>
+            <div class="card-body">
+                <div class="grid-card-title">
+                    <h5 class="card-title">@Model[i].title</h5>
+                </div>
+                <div class="recipeDescContainer">
+                    <p class="card-text">@Model[i].description</p>
+                </div>
+                <button id="pog" type="button" class="btn btn-primary grid-button test" mealid="@Model[i].ID" mealname="@Model[i].title"  instructions="@Model[i].instructions"
+                        ingredients="@Model[i].ingredients" calories="@Model[i].calories" servings="@Model[i].servings" preptime="@Model[i].prepTime"
+                        description="@Model[i].description" imageurl="@Model[i].imageURL">
+                    Take a look
+                </button>
+            </div>
+        </div>
+    </div>
 
 
-                   }
-               
-    
+}
+
+<script src="~/Scripts/Get Recipe Details for Right Side.js" type="module"></script>

@@ -162,6 +162,7 @@
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.eot" />
     <None Include="Scripts\Vendor\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\Get Recipe Details for Right Side.js" />
     <Content Include="Scripts\Vendor\jquery-3.4.1.js" />
     <Content Include="Scripts\Vendor\jquery-3.4.1.min.js" />
     <Content Include="Scripts\Vendor\jquery-3.4.1.slim.js" />

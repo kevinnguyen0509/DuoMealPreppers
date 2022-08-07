@@ -14,22 +14,24 @@
         <div class="header">
             <h4>Click on the checkmark or X to find new recipes that may interest you!</h4>
         </div>
-        
-        
-        @for (int i = 0; i < Model.Count; i++)
-        {
+
+        @{ 
+        int rand = Model.Count;
+        Random r = new Random();
+        int n = r.Next(rand);
 
         <div class="foodCards">
             <div id="foodName">
-                <p>@Model[i].title</p>
+                <p>@Model[n].title</p>
             </div>
             <div id="CookTime">
-                <p>@Model[i].prepTime</p>
+                <p>@Model[n].prepTime</p>
             </div>
         </div>
         <div class="photo">
-            <img src="@Model[i].imageURL" />
+            <img src="@Model[n].imageURL" />
         </div>
+        }
         }
 
         <div class="buttons">

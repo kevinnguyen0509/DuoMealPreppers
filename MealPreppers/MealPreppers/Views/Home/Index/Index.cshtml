@@ -1,4 +1,6 @@
-﻿@{
+﻿@model List<MealPreppers.Models.RecipeItem>
+
+@{
     ViewBag.Title = "Home Page";
 }
 @Styles.Render(("~/Content/CustomCss/Index/leftPartialViews/BottomLeftPanel.css"))
@@ -7,13 +9,13 @@
 <div class="row">
     <div class="col-md-2 col-xs-12" id="IndexLeftSide">
         @Html.Partial("~/Views/Home/Index/Left/_leftTopPanel.cshtml")
-            <div>
-                @Html.Partial("~/Views/Home/Index/Left/_leftBottomPanel.cshtml")
-            </div>
+        <div>
+            @Html.Partial("~/Views/Home/Index/Left/_leftBottomPanel.cshtml")
+        </div>
     </div>
-    <div id="middleGrid" class="col-md-8 col-xs-12" >
+    <div id="middleGrid" class="col-md-8 col-xs-12">
 
-        @Html.Partial("~/Views/Home/Index/Middle/_GridView.cshtml")
+        @Html.Partial("~/Views/Home/Index/Middle/_GridView.cshtml", Model)
     </div>
     <div class="col-md-2 col-xs-12" id="IndexRightSide">
         <div id="RightSideHeaderContainer">
