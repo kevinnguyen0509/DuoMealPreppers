@@ -23,9 +23,8 @@ namespace MealPreppers.Controllers
 
         public ActionResult Index()
         {
-            RecipeItem recipeItem = new RecipeItem();
            
-            List<RecipeItem> recipeList = GetAllRecipes.GrabRecipeList(recipeItem);
+            List<RecipeItem> recipeList = GetAllRecipes.GrabRecipeList();
 
 
             return View(IndexPath, recipeList);
@@ -47,9 +46,8 @@ namespace MealPreppers.Controllers
         public ActionResult Discover()
         {
 
-            RecipeItem recipeItem = new RecipeItem();
 
-            List<RecipeItem> recipeList = GetAllRecipes.GrabRecipeList(recipeItem);
+            List<RecipeItem> recipeList = GetAllRecipes.GrabRecipeList();
             
 
             return View(DiscoverPath,recipeList);

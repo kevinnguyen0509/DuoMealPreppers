@@ -10,7 +10,7 @@ namespace MealPreppers.DataFactory
 {
     public class GetAllRecipes
     {
-        public List<RecipeItem> GrabRecipeList(RecipeItem recipeItem)
+        public List<RecipeItem> GrabRecipeList()
         {
 
             List<RecipeItem> recipeList = new List<RecipeItem>();
