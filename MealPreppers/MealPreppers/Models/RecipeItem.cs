@@ -17,6 +17,21 @@ namespace MealPreppers.Models
         public int calories { get; set; }
         public string imageURL { get; set; }
 
-        
+
+        private List<RecipeItem> Shuffle(List<RecipeItem> recipeItemsList)
+        {
+            Random tinderShuffle = new Random();
+            int n = recipeItemsList.Count;
+            while (n > 1)
+            {
+                n--;
+                int ts = tinderShuffle.Next(n + 1);
+                RecipeItem listValue = recipeItemsList[ts];
+                recipeItemsList[ts] = recipeItemsList[n];
+                recipeItemsList[n] = listValue;
+            }
+            return recipeItemsList;
+        }
     }
+    
 }
