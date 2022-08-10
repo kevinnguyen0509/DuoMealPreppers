@@ -5,8 +5,8 @@
         <h2>Owned Ingredients</h2>
     </div>
     <div id="haveIngredientsSearch">
-        <input type="search" placeholder="Salt" id="haveIngredientsSearchInput" />
-        <button type="submit" name="search">Search</button>
+        <input type="text" placeholder="Salt" id="haveIngredientsSearchInput" />
+        <button type="button" id="addOwnedFood" name="search">Add Owned Ingredient</button>
     </div>
     <div id="filterhaveIngredients">
         <button id ="haveFood" class="btn active" onclick="filterSelection('all')">Show All Ingredients</button>
@@ -16,6 +16,9 @@
         <button id ="haveFood" class="btn" onclick="filterSelection('Soy Sauce')">Soy Sauce</button>
         <button id ="haveFood" class="btn" onclick="filterSelection('Shrimp')">Shrimp</button>
         <button id ="haveFood" class="btn" onclick="filterSelection('Lettuce')">Lettuce</button>
+        <button id ="haveFood" class="btn" onclick="filterSelection('Lettuce')">Lettuce</button>
+        
     </div>
 </div>
 
+<script src="~/Scripts/OwnedFoodItems.js"></script>

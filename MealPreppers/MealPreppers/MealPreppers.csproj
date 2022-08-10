@@ -154,6 +154,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\Add Recipe Modal.js" />
     <Content Include="Scripts\FriendFeed\FriendFeedHorizontalScroll.js" />
+    <Content Include="Scripts\OwnedFoodItems.js" />
     <Content Include="Scripts\Vendor\bootstrap.js" />
     <Content Include="Scripts\Vendor\bootstrap.min.js" />
     <Content Include="fonts\FontAwesome.otf" />
