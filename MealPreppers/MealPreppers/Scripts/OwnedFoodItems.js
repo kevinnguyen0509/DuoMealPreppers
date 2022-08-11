@@ -1,11 +1,13 @@
 ﻿let filterList = $("#filterhaveIngredients");
-let filterItem = $("#haveIngredientsSearchInput");
+
 let filterList2 = document.getElementById("filterhaveIngredients");
 
 $("#addOwnedFood").click(function () {
-    filterList2.innerHTML = "";
+    let filterItem = $("#haveIngredientsSearchInput");
+   // let filterItem = document.getElementById("haveIngredientsSearchInput");
     console.log(filterList);
-    filterList2.innerHTML += '<button id="haveFood" class="btn" onclick="filterSelection("Lettuce")">Lettuce</button>';
+    let owndedFoodItem = `<button id="haveFood" class="btn" onclick="filterSelection("${filterItem.val()}")">${filterItem.val()}</button>`;
+    filterList2.insertAdjacentHTML("beforeend", owndedFoodItem);
     //'<button id ="haveFood" class="btn" onclick="filterSelection('+filterItem.value+')>' + filterItem.value + '</button>';
     console.log(filterList);
 
